@@ -1,0 +1,262 @@
+{
+  "common": {
+    "appName": "Another Me",
+    "tagline": "Find your behavioral twin",
+    "nav": {
+      "home": "Home",
+      "dashboard": "Dashboard",
+      "daily": "Daily Log",
+      "records": "Records",
+      "matches": "Matches",
+      "profile": "Profile",
+      "pricing": "Pricing",
+      "login": "Login",
+      "register": "Sign Up",
+      "logout": "Log Out"
+    },
+    "buttons": {
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "save": "Save",
+      "delete": "Delete",
+      "accept": "Accept",
+      "reject": "Reject",
+      "send": "Send",
+      "back": "Back",
+      "next": "Next",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "viewAll": "View All"
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again.",
+      "unauthorized": "You must be logged in to do this.",
+      "notFound": "Not found.",
+      "serverError": "Server error. Please try again later.",
+      "dailyLimit": "You've reached your daily limit.",
+      "alreadySent": "Request already sent."
+    },
+    "status": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "rejected": "Rejected"
+    },
+    "footer": {
+      "tagline": "Connecting people through shared behaviors.",
+      "rights": "All rights reserved."
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "Find Your Behavioral Twin",
+      "subtitle": "Record your daily activities, discover people who live just like you, and become pen pals with your \"another me\".",
+      "cta": "Start Your Journey",
+      "secondary": "See How It Works"
+    },
+    "features": {
+      "title": "How It Works",
+      "subtitle": "Three simple steps to find your behavioral match",
+      "step1": {
+        "title": "Log Daily Activities",
+        "description": "Select tags for your daily activities — reading, coding, cooking, and more. Add notes to share the details."
+      },
+      "step2": {
+        "title": "Build Your Profile",
+        "description": "After 20 records, our algorithm analyzes your behavioral patterns and finds people with similar lifestyles."
+      },
+      "step3": {
+        "title": "Connect with Your Twin",
+        "description": "Send pen pal requests to your matches. Once accepted, exchange emails and forge a unique connection."
+      }
+    },
+    "stats": {
+      "users": "Active Users",
+      "connections": "Connections Made",
+      "tags": "Activity Tags"
+    },
+    "testimonials": {
+      "title": "What People Say",
+      "t1": {
+        "text": "I found someone who reads the same books, codes in the same languages, and meditates every morning just like me. It's uncanny!",
+        "author": "Sarah K."
+      },
+      "t2": {
+        "text": "My pen pal and I have been writing for months. We live on different continents but share the same daily rhythm.",
+        "author": "Li Wei"
+      }
+    },
+    "cta": {
+      "title": "Ready to Meet Yourself?",
+      "subtitle": "Join thousands of people discovering their behavioral twins.",
+      "button": "Create Free Account"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account",
+      "email": "Email Address",
+      "password": "Password",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "register": "Sign up",
+      "error": "Invalid email or password."
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Start finding your behavioral twin",
+      "name": "Full Name",
+      "email": "Email Address",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "login": "Sign in",
+      "passwordMismatch": "Passwords do not match.",
+      "emailTaken": "This email is already registered.",
+      "success": "Account created! Redirecting..."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}!",
+    "stats": {
+      "totalRecords": "Total Records",
+      "daysActive": "Days Active",
+      "topTag": "Top Activity",
+      "matchScore": "Match Score"
+    },
+    "progress": {
+      "title": "Progress to Matching",
+      "description": "Record {remaining} more activities to unlock matching.",
+      "unlocked": "Matching unlocked! Check your matches.",
+      "records": "{count} / 20 records"
+    },
+    "recentActivity": "Recent Activity",
+    "noRecords": "No records yet. Start logging your daily activities!",
+    "goToDaily": "Log Today's Activity"
+  },
+  "daily": {
+    "title": "Daily Activity Log",
+    "subtitle": "What did you do today?",
+    "selectTag": "Select an activity",
+    "addNote": "Add a note (optional)",
+    "notePlaceholder": "Describe your activity...",
+    "submit": "Save Record",
+    "success": "Activity recorded!",
+    "dailyLimit": "You've logged {count} activities today (max {limit}).",
+    "tags": {
+      "reading": "Reading",
+      "music": "Music",
+      "gaming": "Gaming",
+      "travel": "Travel",
+      "sports": "Sports",
+      "work": "Work",
+      "cooking": "Cooking",
+      "movies": "Movies",
+      "art": "Art",
+      "coding": "Coding",
+      "fitness": "Fitness",
+      "meditation": "Meditation",
+      "photography": "Photography",
+      "learning": "Learning",
+      "socializing": "Socializing"
+    }
+  },
+  "records": {
+    "title": "Activity Records",
+    "subtitle": "Your logged activities over time",
+    "noRecords": "No records yet. Start logging your daily activities!",
+    "filter": {
+      "all": "All Activities",
+      "label": "Filter by activity"
+    },
+    "record": {
+      "on": "on",
+      "note": "Note"
+    }
+  },
+  "matches": {
+    "title": "Your Matches",
+    "subtitle": "People with similar behavioral profiles",
+    "notUnlocked": {
+      "title": "Matching Not Yet Unlocked",
+      "description": "You need {remaining} more records to unlock matching. Keep logging your daily activities!",
+      "cta": "Log Activities"
+    },
+    "noMatches": "No matches found yet. Keep logging activities to improve your profile!",
+    "similarity": "Similarity",
+    "sharedActivities": "Shared Activities",
+    "sendRequest": "Send Pen Pal Request",
+    "requestSent": "Request Sent",
+    "requestAccepted": "Pen Pal! ✉️",
+    "message": {
+      "label": "Add a message (optional)",
+      "placeholder": "Tell them why you want to connect..."
+    }
+  },
+  "profile": {
+    "title": "Profile Settings",
+    "name": "Display Name",
+    "email": "Email Address",
+    "bio": "About Me",
+    "bioPlaceholder": "Tell potential pen pals about yourself...",
+    "isPremium": "Premium Member",
+    "save": "Save Changes",
+    "saved": "Profile saved!",
+    "changePassword": {
+      "title": "Change Password",
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "Confirm New Password",
+      "submit": "Update Password",
+      "success": "Password updated!"
+    },
+    "penpalRequests": {
+      "title": "Pen Pal Requests",
+      "incoming": "Incoming Requests",
+      "outgoing": "Sent Requests",
+      "noIncoming": "No incoming requests.",
+      "noOutgoing": "No sent requests."
+    }
+  },
+  "pricing": {
+    "title": "Simple Pricing",
+    "subtitle": "Unlock unlimited connections",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "forever",
+      "features": [
+        "Log up to 5 activities/day",
+        "Access matching after 20 records",
+        "Send up to 3 requests/day",
+        "Basic profile"
+      ],
+      "cta": "Get Started Free"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "$9.99",
+      "period": "per month",
+      "features": [
+        "Unlimited activity logging",
+        "Priority matching algorithm",
+        "Unlimited pen pal requests",
+        "Enhanced profile with bio",
+        "View who viewed your profile",
+        "Premium badge"
+      ],
+      "cta": "Go Premium"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How does matching work?",
+      "a1": "We use cosine similarity on your activity frequency vectors to find people with the most similar behavioral patterns.",
+      "q2": "What happens after I send a pen pal request?",
+      "a2": "If the other person accepts, you'll both receive each other's email addresses to start your correspondence.",
+      "q3": "Can I cancel my premium subscription?",
+      "a3": "Yes, you can cancel anytime. Your premium features remain active until the end of the billing period."
+    }
+  }
+}
