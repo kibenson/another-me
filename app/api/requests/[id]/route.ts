@@ -9,7 +9,7 @@ const patchSchema = z.object({
 
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -24,7 +24,7 @@ export async function PATCH(
 
   const { status } = parsed.data;
   const userId = session.user.id;
-  const requestId = params.id;
+  const { id: requestId } = await params;
 
   const request = await prisma.penpalRequest.findUnique({
     where: { id: requestId },
