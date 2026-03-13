@@ -1,0 +1,262 @@
+{
+  "common": {
+    "appName": "另一个我",
+    "tagline": "寻找你的行为双胞胎",
+    "nav": {
+      "home": "首页",
+      "dashboard": "仪表盘",
+      "daily": "每日记录",
+      "records": "历史记录",
+      "matches": "匹配结果",
+      "profile": "个人资料",
+      "pricing": "定价",
+      "login": "登录",
+      "register": "注册",
+      "logout": "退出"
+    },
+    "buttons": {
+      "submit": "提交",
+      "cancel": "取消",
+      "save": "保存",
+      "delete": "删除",
+      "accept": "接受",
+      "reject": "拒绝",
+      "send": "发送",
+      "back": "返回",
+      "next": "下一步",
+      "getStarted": "立即开始",
+      "learnMore": "了解更多",
+      "viewAll": "查看全部"
+    },
+    "errors": {
+      "generic": "出现错误，请重试。",
+      "unauthorized": "请先登录。",
+      "notFound": "未找到。",
+      "serverError": "服务器错误，请稍后再试。",
+      "dailyLimit": "您已达到今日上限。",
+      "alreadySent": "请求已发送。"
+    },
+    "status": {
+      "pending": "待处理",
+      "accepted": "已接受",
+      "rejected": "已拒绝"
+    },
+    "footer": {
+      "tagline": "通过共同的行为习惯连接彼此。",
+      "rights": "版权所有。"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "寻找你的行为双胞胎",
+      "subtitle": "记录你的日常活动，发现与你生活方式相似的人，与你的「另一个我」成为笔友。",
+      "cta": "开始你的旅程",
+      "secondary": "了解工作原理"
+    },
+    "features": {
+      "title": "工作原理",
+      "subtitle": "三步找到你的行为匹配者",
+      "step1": {
+        "title": "记录每日活动",
+        "description": "为你的日常活动选择标签——读书、编程、烹饪等。添加备注分享更多细节。"
+      },
+      "step2": {
+        "title": "建立你的档案",
+        "description": "积累20条记录后，我们的算法将分析你的行为模式，找到生活方式相似的人。"
+      },
+      "step3": {
+        "title": "与双胞胎建立联系",
+        "description": "向匹配到的人发送笔友请求。接受后，交换邮件，建立独特的联系。"
+      }
+    },
+    "stats": {
+      "users": "活跃用户",
+      "connections": "建立的联系",
+      "tags": "活动标签"
+    },
+    "testimonials": {
+      "title": "用户评价",
+      "t1": {
+        "text": "我找到了一个读同样书籍、用同样语言编程、每天早晨冥想的人，就像是我的镜子！",
+        "author": "张晓薇"
+      },
+      "t2": {
+        "text": "我和我的笔友已经通信几个月了。我们生活在不同的大陆，却有着相同的日常节奏。",
+        "author": "Mike R."
+      }
+    },
+    "cta": {
+      "title": "准备好遇见另一个自己了吗？",
+      "subtitle": "加入数千名正在发现行为双胞胎的用户。",
+      "button": "免费创建账号"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录你的账号",
+      "email": "邮箱地址",
+      "password": "密码",
+      "submit": "登录",
+      "noAccount": "还没有账号？",
+      "register": "立即注册",
+      "error": "邮箱或密码错误。"
+    },
+    "register": {
+      "title": "创建账号",
+      "subtitle": "开始寻找你的行为双胞胎",
+      "name": "显示名称",
+      "email": "邮箱地址",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "submit": "创建账号",
+      "hasAccount": "已有账号？",
+      "login": "立即登录",
+      "passwordMismatch": "两次密码不匹配。",
+      "emailTaken": "该邮箱已被注册。",
+      "success": "账号创建成功！正在跳转..."
+    }
+  },
+  "dashboard": {
+    "title": "仪表盘",
+    "welcome": "欢迎回来，{name}！",
+    "stats": {
+      "totalRecords": "总记录数",
+      "daysActive": "活跃天数",
+      "topTag": "最常活动",
+      "matchScore": "匹配分数"
+    },
+    "progress": {
+      "title": "匹配进度",
+      "description": "再记录 {remaining} 次活动即可解锁匹配。",
+      "unlocked": "匹配已解锁！查看你的匹配结果。",
+      "records": "{count} / 20 条记录"
+    },
+    "recentActivity": "最近活动",
+    "noRecords": "暂无记录。开始记录你的日常活动吧！",
+    "goToDaily": "记录今日活动"
+  },
+  "daily": {
+    "title": "每日活动记录",
+    "subtitle": "今天你做了什么？",
+    "selectTag": "选择一个活动",
+    "addNote": "添加备注（可选）",
+    "notePlaceholder": "描述你的活动...",
+    "submit": "保存记录",
+    "success": "活动已记录！",
+    "dailyLimit": "今天已记录 {count} 次活动（最多 {limit} 次）。",
+    "tags": {
+      "reading": "读书",
+      "music": "音乐",
+      "gaming": "游戏",
+      "travel": "旅游",
+      "sports": "运动",
+      "work": "工作",
+      "cooking": "烹饪",
+      "movies": "电影",
+      "art": "艺术",
+      "coding": "编程",
+      "fitness": "健身",
+      "meditation": "冥想",
+      "photography": "摄影",
+      "learning": "学习",
+      "socializing": "社交"
+    }
+  },
+  "records": {
+    "title": "活动记录",
+    "subtitle": "你随时间积累的活动记录",
+    "noRecords": "暂无记录。开始记录你的日常活动吧！",
+    "filter": {
+      "all": "所有活动",
+      "label": "按活动筛选"
+    },
+    "record": {
+      "on": "于",
+      "note": "备注"
+    }
+  },
+  "matches": {
+    "title": "你的匹配结果",
+    "subtitle": "与你行为模式相似的人",
+    "notUnlocked": {
+      "title": "匹配尚未解锁",
+      "description": "还需要 {remaining} 条记录才能解锁匹配。继续记录你的日常活动吧！",
+      "cta": "记录活动"
+    },
+    "noMatches": "暂时没有找到匹配。继续记录活动来完善你的档案！",
+    "similarity": "相似度",
+    "sharedActivities": "共同活动",
+    "sendRequest": "发送笔友请求",
+    "requestSent": "请求已发送",
+    "requestAccepted": "笔友 ✉️",
+    "message": {
+      "label": "添加留言（可选）",
+      "placeholder": "告诉他们为什么想要建立联系..."
+    }
+  },
+  "profile": {
+    "title": "个人资料设置",
+    "name": "显示名称",
+    "email": "邮箱地址",
+    "bio": "关于我",
+    "bioPlaceholder": "向潜在笔友介绍自己...",
+    "isPremium": "高级会员",
+    "save": "保存修改",
+    "saved": "资料已保存！",
+    "changePassword": {
+      "title": "修改密码",
+      "current": "当前密码",
+      "new": "新密码",
+      "confirm": "确认新密码",
+      "submit": "更新密码",
+      "success": "密码已更新！"
+    },
+    "penpalRequests": {
+      "title": "笔友请求",
+      "incoming": "收到的请求",
+      "outgoing": "发送的请求",
+      "noIncoming": "暂无收到的请求。",
+      "noOutgoing": "暂无发送的请求。"
+    }
+  },
+  "pricing": {
+    "title": "简单定价",
+    "subtitle": "解锁无限连接",
+    "free": {
+      "name": "免费版",
+      "price": "¥0",
+      "period": "永久免费",
+      "features": [
+        "每天记录最多5次活动",
+        "积累20条记录后解锁匹配",
+        "每天发送最多3个请求",
+        "基础个人资料"
+      ],
+      "cta": "免费开始"
+    },
+    "premium": {
+      "name": "高级版",
+      "price": "¥68",
+      "period": "每月",
+      "features": [
+        "无限活动记录",
+        "优先匹配算法",
+        "无限笔友请求",
+        "增强个人资料（含个人简介）",
+        "查看谁浏览了你的资料",
+        "高级会员标识"
+      ],
+      "cta": "升级高级版"
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "匹配是如何工作的？",
+      "a1": "我们使用你活动频率向量的余弦相似度，找到行为模式最相似的人。",
+      "q2": "发送笔友请求后会发生什么？",
+      "a2": "如果对方接受，你们将互相收到对方的邮箱地址，开始通信。",
+      "q3": "可以取消高级订阅吗？",
+      "a3": "可以随时取消。高级功能在计费周期结束前保持有效。"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  passwordHash  String
+  bio           String?
+  isPremium     Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  records         Record[]
+  dailyUsages     DailyUsage[]
+  sentRequests    PenpalRequest[] @relation("SentRequests")
+  receivedRequests PenpalRequest[] @relation("ReceivedRequests")
+  payments        Payment[]
+
+  @@map("users")
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  nameEn    String
+  nameZh    String
+  icon      String
+  promptEn  String
+  promptZh  String
+  createdAt DateTime @default(now())
+
+  records Record[]
+
+  @@map("tags")
+}
+
+model Record {
+  id        String   @id @default(cuid())
+  userId    String
+  tagId     String
+  note      String?
+  date      DateTime @default(now())
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tag  Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([tagId])
+  @@map("records")
+}
+
+model DailyUsage {
+  id        String   @id @default(cuid())
+  userId    String
+  date      String   // YYYY-MM-DD format
+  count     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date])
+  @@index([userId])
+  @@map("daily_usages")
+}
+
+model PenpalRequest {
+  id         String        @id @default(cuid())
+  senderId   String
+  receiverId String
+  status     RequestStatus @default(PENDING)
+  message    String?
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+
+  sender   User @relation("SentRequests", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User @relation("ReceivedRequests", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@unique([senderId, receiverId])
+  @@index([senderId])
+  @@index([receiverId])
+  @@map("penpal_requests")
+}
+
+model Payment {
+  id                String        @id @default(cuid())
+  userId            String
+  stripeSessionId   String        @unique
+  stripePaymentId   String?
+  amount            Int
+  currency          String        @default("usd")
+  status            PaymentStatus @default(PENDING)
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("payments")
+}
+
+enum RequestStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
