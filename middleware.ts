@@ -5,6 +5,8 @@ export default createMiddleware({
   defaultLocale: 'en',
 });
 
+// Apply i18n middleware to all routes except API endpoints,
+// Next.js internals, and static files (images, fonts, etc.)
 export const config = {
   matcher: ['/((?!api|_next|.*\\..*).*)'],
 };

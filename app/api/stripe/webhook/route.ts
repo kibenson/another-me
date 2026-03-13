@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
             data: {
               userId,
               stripeSessionId: session.id,
-              stripePaymentId: session.payment_intent as string | null ?? undefined,
+              stripePaymentId: session.payment_intent as string | undefined,
               amount: session.amount_total ?? 0,
               currency: session.currency ?? 'usd',
               status: 'COMPLETED',

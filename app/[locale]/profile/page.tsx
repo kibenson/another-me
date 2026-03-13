@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { getTranslations } from 'next-intl/server';
 import ProfileForm from './ProfileForm';
+import RequestActionButtons from './RequestActionButtons';
 
 export default async function ProfilePage() {
   const session = await auth();
@@ -56,7 +57,7 @@ export default async function ProfilePage() {
                   </div>
                   <StatusBadge status={req.status} />
                   {req.status === 'PENDING' && (
-                    <RequestActions requestId={req.id} senderEmail={req.sender.email} />
+                    <RequestActionButtons requestId={req.id} />
                   )}
                 </div>
               ))}
@@ -114,29 +115,6 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
-function RequestActions({ requestId, senderEmail }: { requestId: string; senderEmail: string }) {
-  return (
-    <div className="flex gap-2">
-      <form action={`/api/requests/${requestId}`} method="POST">
-        <input type="hidden" name="_method" value="PATCH" />
-        <input type="hidden" name="status" value="ACCEPTED" />
-        <button
-          type="submit"
-          className="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors font-medium"
-        >
-          Accept
-        </button>
-      </form>
-      <form action={`/api/requests/${requestId}`} method="POST">
-        <input type="hidden" name="_method" value="PATCH" />
-        <input type="hidden" name="status" value="REJECTED" />
-        <button
-          type="submit"
-          className="bg-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-lg hover:bg-gray-300 transition-colors font-medium"
-        >
-          Reject
-        </button>
-      </form>
-    </div>
-  );
+function RequestActions({ requestId }: { requestId: string }) {
+  return <RequestActionButtons requestId={requestId} />;
 }

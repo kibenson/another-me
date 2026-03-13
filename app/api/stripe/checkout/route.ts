@@ -8,6 +8,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'UNAUTHORIZED' }, { status: 401 });
   }
 
+  const body = await req.json().catch(() => ({}));
+  const locale = body.locale || 'en';
+
   const origin = req.headers.get('origin') || process.env.NEXTAUTH_URL || 'http://localhost:3000';
 
   try {
@@ -22,8 +25,8 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: `${origin}/dashboard?upgrade=success`,
-      cancel_url: `${origin}/pricing?upgrade=cancelled`,
+      success_url: `${origin}/${locale}/dashboard?upgrade=success`,
+      cancel_url: `${origin}/${locale}/pricing?upgrade=cancelled`,
     });
 
     return NextResponse.json({ url: checkoutSession.url });

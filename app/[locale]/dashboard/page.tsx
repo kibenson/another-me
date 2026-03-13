@@ -7,12 +7,16 @@ import ProgressBar from '@/components/ProgressBar';
 import { RECORDS_REQUIRED_FOR_MATCH } from '@/lib/utils';
 import { formatDate } from '@/lib/utils';
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
   const session = await auth();
   if (!session?.user?.id) redirect('/auth/login');
 
   const t = await getTranslations('dashboard');
-  const locale = 'en';
+  const locale = params.locale ?? 'en';
 
   const userId = session.user.id;
 

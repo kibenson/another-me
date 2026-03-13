@@ -1,11 +1,12 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 
 export default function LandingPage() {
   const tc = useTranslations('common');
   const tl = useTranslations('landing');
+  const locale = useLocale();
 
   return (
     <div className="flex flex-col">
@@ -23,7 +24,7 @@ export default function LandingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/auth/register"
+              href={`/${locale}/auth/register`}
               className="bg-white text-indigo-600 font-semibold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors text-lg shadow-lg"
             >
               {tl('hero.cta')}
@@ -141,7 +142,7 @@ export default function LandingPage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{tl('cta.title')}</h2>
           <p className="text-xl text-white/90 mb-8">{tl('cta.subtitle')}</p>
           <Link
-            href="/auth/register"
+            href={`/${locale}/auth/register`}
             className="bg-white text-indigo-600 font-bold px-10 py-4 rounded-full text-lg hover:bg-gray-100 transition-colors shadow-lg inline-block"
           >
             {tl('cta.button')}
