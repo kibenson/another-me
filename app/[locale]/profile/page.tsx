@@ -115,6 +115,4 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
-function RequestActions({ requestId }: { requestId: string }) {
-  return <RequestActionButtons requestId={requestId} />;
-}
+
